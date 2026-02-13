@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO -->
+<title>CLEANÖVATE Premium Laundry | Dry Cleaning in Chinchwad</title>
+<meta name="description" content="CLEANÖVATE Premium Laundry offers luxury dry cleaning, wash & iron, wash & fold, carpet & shoes cleaning in Chinchwad. Call 9373608466.">
+<meta name="keywords" content="Laundry in Chinchwad, Dry Cleaning Pimpri, Wash and Iron 150kg, Wash and Fold 90kg">
+<meta name="author" content="CLEANÖVATE Premium Laundry">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<style>
+:root{
+--primary:#6a11cb;
+--secondary:#8e2de2;
+--bg:#ffffff;
+--text:#111;
+--card:#f5f5f7;
+}
+body.dark{
+--bg:#0f0f12;
+--text:#fff;
+--card:#1c1c22;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:var(--bg);color:var(--text);transition:0.4s;}
+nav{
+display:flex;justify-content:space-between;align-items:center;
+padding:20px 60px;
+position:fixed;width:100%;
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(20px);
+z-index:1000;
+}
+nav h2{color:var(--primary);}
+nav ul{display:flex;gap:30px;list-style:none;}
+nav a{text-decoration:none;color:var(--text);}
+.toggle{cursor:pointer;}
+
+.hero{
+height:100vh;
+display:flex;flex-direction:column;justify-content:center;align-items:center;
+text-align:center;padding:0 20px;
+}
+.hero h1{
+font-size:60px;
+background:linear-gradient(90deg,var(--primary),var(--secondary));
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+.btn{
+margin-top:30px;padding:15px 40px;border-radius:40px;
+background:linear-gradient(90deg,var(--primary),var(--secondary));
+color:white;text-decoration:none;border:none;cursor:pointer;
+}
+.section{padding:120px 20px;text-align:center;}
+.services{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;margin-top:60px;}
+.card{
+background:var(--card);
+padding:40px;width:260px;border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
+}
+.card i{font-size:40px;margin-bottom:20px;color:var(--primary);}
+footer{padding:40px;text-align:center;background:var(--card);}
+
+.map-container{
+max-width:900px;margin:40px auto;border-radius:20px;
+overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+.float-whatsapp{
+position:fixed;bottom:30px;right:30px;
+background:#25D366;color:white;
+padding:18px;border-radius:50%;
+font-size:22px;text-decoration:none;
+}
+#logoIntro{
+position:fixed;width:100%;height:100vh;
+background:black;color:white;
+display:flex;justify-content:center;align-items:center;
+flex-direction:column;z-index:9999;
+animation:fadeOut 2s ease 2.5s forwards;
+}
+#logoIntro h1{
+font-size:50px;
+animation:zoomIn 2s ease;
+}
+@keyframes zoomIn{from{transform:scale(0);}to{transform:scale(1);}}
+@keyframes fadeOut{to{opacity:0;visibility:hidden;}}
+</style>
+</head>
+
+<body>
+
+<div id="logoIntro">
+<h1>CLEANÖVATE</h1>
+<p>Premium Laundry Experience</p>
+</div>
+
+<nav>
+<h2>CLEANÖVATE</h2>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#map">Location</a></li>
+<li class="toggle" onclick="toggleMode()"><i class="fas fa-moon"></i></li>
+</ul>
+</nav>
+
+<section class="hero">
+<h1>Luxury Laundry & Dry Cleaning</h1>
+<p>Chinchwad – 411033 | 📞 9373608466</p>
+<a href="https://wa.me/919373608466" class="btn">Book on WhatsApp</a>
+<button class="btn" onclick="payNow()">Pay Online</button>
+</section>
+
+<section id="services" class="section">
+<h2>Our Premium Services</h2>
+<div class="services">
+<div class="card"><i class="fas fa-shoe-prints"></i><h3>Shoes Cleaning</h3></div>
+<div class="card"><i class="fas fa-rug"></i><h3>Carpet Cleaning</h3></div>
+<div class="card"><i class="fas fa-wind"></i><h3>Dry Cleaning</h3></div>
+<div class="card"><i class="fas fa-tshirt"></i><h3>Wash & Iron ₹150/kg</h3></div>
+<div class="card"><i class="fas fa-box"></i><h3>Wash & Fold ₹90/kg</h3></div>
+</div>
+</section>
+
+<section id="map" class="section">
+<h2>Visit Our Store</h2>
+<div class="map-container">
+<iframe 
+src="https://www.google.com/maps?q=ELPRO+Square+Mall+Chinchwad&output=embed"
+width="100%" height="400" style="border:0;" allowfullscreen="">
+</iframe>
+</div>
+</section>
+
+<footer>
+© 2026 CLEANÖVATE Premium Laundry  
+Shop 1, Balaji Niwas, Opposite ELPRO Square City Mall  
+Pimpri-Chinchwad Link Road, Chinchwad – 411033
+</footer>
+
+<a href="https://wa.me/919373608466" class="float-whatsapp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+ScrollReveal().reveal('.hero',{delay:300,distance:'50px',origin:'bottom'});
+ScrollReveal().reveal('.card',{interval:200});
+ScrollReveal().reveal('.map-container',{delay:300});
+
+function toggleMode(){
+document.body.classList.toggle("dark");
+}
+
+function payNow(){
+var options = {
+"key": "YOUR_RAZORPAY_KEY",
+"amount": 50000,
+"currency": "INR",
+"name": CLEANÖVATE Premium Laundry",
+"description": "Laundry Service Payment",
+"handler": function (response){
+alert("Payment Successful!");
+}
+};
+var rzp = new Razorpay(options);
+rzp.open();
+}
+</script>
+
+</body>
+</html>
